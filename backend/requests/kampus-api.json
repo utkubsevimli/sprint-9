@@ -1,0 +1,145 @@
+{
+  "info": {
+    "_postman_id": "361ce0aa-f53c-4c7c-8cbe-a94e669e8d31",
+    "name": "Kampüs API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "60117704",
+    "_collection_link": "https://go.postman.co/collection/60117704-361ce0aa-f53c-4c7c-8cbe-a94e669e8d31?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "1 Health",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3000/health",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "health"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "2 Etkinlik listesi",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3000/events",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "events"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "3 Tek etkinlik",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3000/events/event-2",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "events",
+            "event-2"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "4 Olmayan etkinlik",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3000/events/yok",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "events",
+            "yok"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "5 Etkinlik olustur",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"title\": \"Git Atölyesi\",\r\n  \"category\": \"Atölye\",\r\n  \"capacity\": 30,\r\n  \"date\": \"2026-12-01\",\r\n  \"time\": \"14:00\",\r\n  \"location\": \"Bilgisayar Laboratuvarı 1\",\r\n  \"description\": \"Git ve GitHub ile ilk adımlar.\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:3000/events",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "events"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "6 Eksik veri",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"title\": \"Git Atölyesi\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:3000/events",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "events"
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}
